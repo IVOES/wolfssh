@@ -1,0 +1,1196 @@
+apps/wolfsshd/auth.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+apps/wolfsshd/auth.c:828:17: warning: Identical inner 'if' condition is always true. [identicalInnerCondition]
+        if (ret == WOLFSSH_USERAUTH_SUCCESS) {
+                ^
+apps/wolfsshd/auth.c:760:13: note: outer condition: ret==WOLFSSH_USERAUTH_SUCCESS
+    if (ret == WOLFSSH_USERAUTH_SUCCESS &&
+            ^
+apps/wolfsshd/auth.c:828:17: note: identical inner condition: ret==WOLFSSH_USERAUTH_SUCCESS
+        if (ret == WOLFSSH_USERAUTH_SUCCESS) {
+                ^
+apps/wolfsshd/auth.c:478:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/auth.c:465:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/auth.c:478:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/auth.c:1115:50: warning: Either the condition 'auth' is redundant or there is possible null pointer dereference: auth. [nullPointerRedundantCheck]
+    flag = wolfSSHD_ConfigGetPrivilegeSeparation(auth->conf);
+                                                 ^
+apps/wolfsshd/auth.c:1118:13: note: Assuming that condition 'auth' is not redundant
+        if (auth) {
+            ^
+apps/wolfsshd/auth.c:1115:50: note: Null pointer dereference
+    flag = wolfSSHD_ConfigGetPrivilegeSeparation(auth->conf);
+                                                 ^
+apps/wolfsshd/auth.c:172:9: style: The scope of the variable 'typeOk' can be reduced. [variableScope]
+    int typeOk = 0;
+        ^
+apps/wolfsshd/auth.c:173:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+apps/wolfsshd/auth.c:457:11: style: The scope of the variable 'idx' can be reduced. [variableScope]
+    char* idx;
+          ^
+apps/wolfsshd/auth.c:458:9: style: The scope of the variable 'homeDirSz' can be reduced. [variableScope]
+    int homeDirSz;
+        ^
+apps/wolfsshd/auth.c:665:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc;
+        ^
+apps/wolfsshd/auth.c:998:21: style: The scope of the variable 'usr' can be reduced. [variableScope]
+        const char* usr = "sshd";
+                    ^
+apps/wolfsshd/auth.c:1214:24: style: The scope of the variable 'p_passwd' can be reduced. [variableScope]
+        struct passwd *p_passwd;
+                       ^
+apps/wolfsshd/auth.c:304:9: warning: Either the condition 'stored==NULL' is redundant or there is possible null pointer dereference: stored. [nullPointerRedundantCheck]
+    if (stored[0] == 0 && WSTRLEN(input) == 0) {
+        ^
+apps/wolfsshd/auth.c:299:33: note: Assuming that condition 'stored==NULL' is not redundant
+    if (input == NULL || stored == NULL) {
+                                ^
+apps/wolfsshd/auth.c:304:9: note: Null pointer dereference
+    if (stored[0] == 0 && WSTRLEN(input) == 0) {
+        ^
+apps/wolfsshd/auth.c:296:11: style: The scope of the variable 'hashedInput' can be reduced. [variableScope]
+    char* hashedInput;
+          ^
+apps/wolfsshd/auth.c:297:26: style: Variable 'hashedInputSz' is assigned a value that is never used. [unreadVariable]
+    word32 hashedInputSz = 0, storedSz = 0;
+                         ^
+apps/wolfsshd/auth.c:297:40: style: Variable 'storedSz' is assigned a value that is never used. [unreadVariable]
+    word32 hashedInputSz = 0, storedSz = 0;
+                                       ^
+apps/wolfsshd/configuration.c:101:13: style: The comparison 'ret == 0' is always true. [knownConditionTrueFalse]
+    if (ret == 0) {
+            ^
+apps/wolfsshd/configuration.c:85:16: note: 'ret' is assigned value '0' here.
+    long ret = 0;
+               ^
+apps/wolfsshd/configuration.c:101:13: note: The comparison 'ret == 0' is always true.
+    if (ret == 0) {
+            ^
+apps/wolfsshd/configuration.c:127:18: style: The scope of the variable 'tail' can be reduced. [variableScope]
+    int idx = 0, tail, sz = 0;
+                 ^
+apps/wolfsshd/configuration.c:281:11: style: The scope of the variable 'heap' can be reduced. [variableScope]
+    void* heap;
+          ^
+apps/wolfsshd/configuration.c:400:10: style: The scope of the variable 'num' can be reduced. [variableScope]
+    long num;
+         ^
+apps/wolfsshd/configuration.c:502:10: style: The scope of the variable 'portInt' can be reduced. [variableScope]
+    long portInt;
+         ^
+apps/wolfsshd/configuration.c:531:10: style: The scope of the variable 'portInt' can be reduced. [variableScope]
+    long portInt;
+         ^
+apps/wolfsshd/configuration.c:1042:10: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    char tmp[MAX_FILENAME_SZ];
+         ^
+apps/wolfsshd/configuration.c:604:13: style: Variable 'ptr' is assigned a value that is never used. [unreadVariable]
+        ptr = ptr2;
+            ^
+apps/wolfsshd/test/test_configuration.c:63:10: style: The scope of the variable 'filepath' can be reduced. [variableScope]
+    char filepath[MAX_PATH];
+         ^
+apps/wolfsshd/test/test_configuration.c:155:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+apps/wolfsshd/test/test_configuration.c:237:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+apps/wolfsshd/wolfsshd.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+apps/wolfsshd/wolfsshd.c:264:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:258:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:264:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:273:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:264:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:273:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:1277:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:1273:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:1277:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+apps/wolfsshd/wolfsshd.c:251:6: warning: Either the condition 'ctx==NULL' is redundant or there is possible null pointer dereference: ctx. [nullPointerRedundantCheck]
+    *ctx = wolfSSH_CTX_new(WOLFSSH_ENDPOINT_SERVER, NULL);
+     ^
+apps/wolfsshd/wolfsshd.c:252:13: note: Assuming that condition 'ctx==NULL' is not redundant
+    if (ctx == NULL) {
+            ^
+apps/wolfsshd/wolfsshd.c:251:6: note: Null pointer dereference
+    *ctx = wolfSSH_CTX_new(WOLFSSH_ENDPOINT_SERVER, NULL);
+     ^
+apps/wolfsshd/wolfsshd.c:407:31: warning:inconclusive: Either the condition 'ctx==NULL' is redundant or there is possible null pointer dereference: ctx. [nullPointerRedundantCheck]
+    wolfSSH_SetUserAuthTypes(*ctx, DefaultUserAuthTypes);
+                              ^
+apps/wolfsshd/wolfsshd.c:252:13: note: Assuming that condition 'ctx==NULL' is not redundant
+    if (ctx == NULL) {
+            ^
+apps/wolfsshd/wolfsshd.c:407:31: note: Null pointer dereference
+    wolfSSH_SetUserAuthTypes(*ctx, DefaultUserAuthTypes);
+                              ^
+apps/wolfsshd/wolfsshd.c:982:13: style: The scope of the variable 'select_ret' can be reduced. [variableScope]
+        int select_ret = 0;
+            ^
+apps/wolfsshd/wolfsshd.c:922:27: style: Expression is always true because 'else if' condition is opposite to previous condition at line 915. [multiCondition]
+                if (cnt_r > 0) {
+                          ^
+apps/wolfsshd/wolfsshd.c:915:23: note: first condition
+            if (cnt_r <= 0) {
+                      ^
+apps/wolfsshd/wolfsshd.c:922:27: note: else if condition is opposite to first condition
+                if (cnt_r > 0) {
+                          ^
+apps/wolfsshd/wolfsshd.c:1479:29: style: Local variable 'ret' shadows outer variable [shadowVariable]
+                        int ret = ioctlsocket(conn.fd, FIONBIO, &blocking);
+                            ^
+apps/wolfsshd/wolfsshd.c:1252:9: note: Shadowed declaration
+    int ret  = WS_SUCCESS;
+        ^
+apps/wolfsshd/wolfsshd.c:1479:29: note: Shadow variable
+                        int ret = ioctlsocket(conn.fd, FIONBIO, &blocking);
+                            ^
+examples/client/client.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 26 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+examples/client/client.c:136:9: style: The scope of the variable 'select_ret' can be reduced. [variableScope]
+    int select_ret = 0;
+        ^
+examples/client/client.c:136:20: style: Variable 'select_ret' is assigned a value that is never used. [unreadVariable]
+    int select_ret = 0;
+                   ^
+examples/client/client.c:190:15: style: Variable 'sz' is assigned a value that is never used. [unreadVariable]
+    word32 sz = 0;
+              ^
+examples/client/common.c:441:23: style: Variable 'passwordSz' is assigned a value that is never used. [unreadVariable]
+    word32 passwordSz = 0;
+                      ^
+examples/client/common.c:711:17: style: Condition 'ret==0' is always false [knownConditionTrueFalse]
+        if (ret == 0) {
+                ^
+examples/client/common.c:709:16: note: Assignment 'ret=-1', assigned value is -1
+        ret = -1;
+               ^
+examples/client/common.c:711:17: note: Condition 'ret==0' is always false
+        if (ret == 0) {
+                ^
+examples/client/common.c:668:12: error: Uninitialized variable: ret [uninitvar]
+    return ret;
+           ^
+examples/client/common.c:716:12: error: Uninitialized variable: ret [uninitvar]
+    return ret;
+           ^
+examples/echoserver/echoserver.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+examples/echoserver/echoserver.c:1705:28: warning: Either the condition 'buf==NULL' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+    char* end = (char*)buf + bufSz;
+                           ^
+examples/echoserver/echoserver.c:1719:13: note: Assuming that condition 'buf==NULL' is not redundant
+    if (buf == NULL || bufSz == 0)
+            ^
+examples/echoserver/echoserver.c:1705:28: note: Null pointer addition
+    char* end = (char*)buf + bufSz;
+                           ^
+examples/echoserver/echoserver.c:204:17: style: The scope of the variable 'cur' can be reduced. [variableScope]
+    const byte* cur;
+                ^
+examples/echoserver/echoserver.c:1234:9: style: The scope of the variable 'select_ret' can be reduced. [variableScope]
+    int select_ret = 0;
+        ^
+examples/echoserver/echoserver.c:1499:14: style: The scope of the variable 'curStr' can be reduced. [variableScope]
+    StrList* curStr;
+             ^
+examples/echoserver/echoserver.c:1662:11: style: The scope of the variable 'username' can be reduced. [variableScope]
+    char* username;
+          ^
+examples/echoserver/echoserver.c:1663:11: style: The scope of the variable 'password' can be reduced. [variableScope]
+    char* password;
+          ^
+examples/echoserver/echoserver.c:1787:11: style: The scope of the variable 'passwd' can be reduced. [variableScope]
+    char* passwd;
+          ^
+examples/echoserver/echoserver.c:1816:11: style: The scope of the variable 'fileName' can be reduced. [variableScope]
+    char* fileName;
+          ^
+examples/echoserver/echoserver.c:1817:11: style: The scope of the variable 'buf' can be reduced. [variableScope]
+    byte* buf;
+          ^
+examples/echoserver/echoserver.c:626:12: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+    int rc = 0;
+           ^
+examples/echoserver/echoserver.c:1234:20: style: Variable 'select_ret' is assigned a value that is never used. [unreadVariable]
+    int select_ret = 0;
+                   ^
+examples/echoserver/echoserver.c:924:35: style: Expression is always true because 'else if' condition is opposite to previous condition at line 909. [multiCondition]
+                        if (cnt_r > 0) {
+                                  ^
+examples/echoserver/echoserver.c:909:31: note: first condition
+                    if (cnt_r <= 0) {
+                              ^
+examples/echoserver/echoserver.c:924:35: note: else if condition is opposite to first condition
+                        if (cnt_r > 0) {
+                                  ^
+examples/echoserver/echoserver.c:2510:19: style: Condition 'readyFile!=NULL' is always false [knownConditionTrueFalse]
+    if (readyFile != NULL) {
+                  ^
+examples/echoserver/echoserver.c:2499:19: note: Assuming that condition 'readyFile!=NULL' is not redundant
+    if (readyFile != NULL) {
+                  ^
+examples/echoserver/echoserver.c:2510:19: note: Condition 'readyFile!=NULL' is always false
+    if (readyFile != NULL) {
+                  ^
+examples/echoserver/echoserver.c:2625:37: style: Condition '!quit' is always true [knownConditionTrueFalse]
+    } while (multipleConnections && !quit);
+                                    ^
+examples/portfwd/portfwd.c:339:24: warning:inconclusive: Possible null pointer dereference: username [nullPointer]
+           host, port, username, password,
+                       ^
+examples/portfwd/portfwd.c:235:28: note: Assignment 'username=NULL', assigned value is 0
+    const char* username = NULL;
+                           ^
+examples/portfwd/portfwd.c:339:24: note: Null pointer dereference
+           host, port, username, password,
+                       ^
+examples/portfwd/portfwd.c:339:34: warning: Either the condition 'password!=NULL' is redundant or there is possible null pointer dereference: password. [nullPointerRedundantCheck]
+           host, port, username, password,
+                                 ^
+examples/portfwd/portfwd.c:373:18: note: Assuming that condition 'password!=NULL' is not redundant
+    if (password != NULL)
+                 ^
+examples/portfwd/portfwd.c:339:34: note: Null pointer dereference
+           host, port, username, password,
+                                 ^
+examples/scpclient/scpclient.c:296:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret != WS_SUCCESS)
+            ^
+examples/scpclient/scpclient.c:293:13: note: First condition
+    if (ret != WS_SUCCESS)
+            ^
+examples/scpclient/scpclient.c:296:13: note: Second condition
+    if (ret != WS_SUCCESS)
+            ^
+examples/scpclient/scpclient.c:207:20: warning:inconclusive: Possible null pointer dereference: path1 [nullPointer]
+    path2 = strchr(path1, ':');
+                   ^
+examples/scpclient/scpclient.c:107:19: note: Assignment 'path1=NULL', assigned value is 0
+    char* path1 = NULL;
+                  ^
+examples/scpclient/scpclient.c:207:20: note: Null pointer dereference
+    path2 = strchr(path1, ':');
+                   ^
+examples/scpclient/scpclient.c:215:16: warning:inconclusive: Possible null pointer dereference: path1 [nullPointer]
+    if (strlen(path1) == 0 || strlen(path2) == 0) {
+               ^
+examples/scpclient/scpclient.c:107:19: note: Assignment 'path1=NULL', assigned value is 0
+    char* path1 = NULL;
+                  ^
+examples/scpclient/scpclient.c:215:16: note: Null pointer dereference
+    if (strlen(path1) == 0 || strlen(path2) == 0) {
+               ^
+examples/server/server.c:75:17: style: The scope of the variable 'cur' can be reduced. [variableScope]
+    const byte* cur;
+                ^
+examples/server/server.c:117:9: style: The scope of the variable 'select_ret' can be reduced. [variableScope]
+    int select_ret = 0;
+        ^
+examples/server/server.c:183:13: style: The scope of the variable 'bufSz' can be reduced. [variableScope]
+        int bufSz, backlogSz = 0, rxSz, txSz, stop = 0, txSum;
+            ^
+examples/server/server.c:445:11: style: The scope of the variable 'username' can be reduced. [variableScope]
+    char* username;
+          ^
+examples/server/server.c:446:11: style: The scope of the variable 'password' can be reduced. [variableScope]
+    char* password;
+          ^
+examples/server/server.c:488:11: style: The scope of the variable 'publicKey64' can be reduced. [variableScope]
+    byte* publicKey64;
+          ^
+examples/server/server.c:490:11: style: The scope of the variable 'username' can be reduced. [variableScope]
+    byte* username;
+          ^
+examples/server/server.c:117:20: style: Variable 'select_ret' is assigned a value that is never used. [unreadVariable]
+    int select_ret = 0;
+                   ^
+examples/server/server.c:796:19: style: Variable 'args.argc' is assigned a value that is never used. [unreadVariable]
+        args.argc = argc;
+                  ^
+examples/server/server.c:797:19: style: Variable 'args.argv' is assigned a value that is never used. [unreadVariable]
+        args.argv = argv;
+                  ^
+examples/sftpclient/sftpclient.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:103:17: style: The scope of the variable 'cur' can be reduced. [variableScope]
+    const byte* cur;
+                ^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:151:13: style: The scope of the variable 'bufSz' can be reduced. [variableScope]
+        int bufSz, backlogSz = 0, rxSz, txSz, stop = 0, txSum;
+            ^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:366:11: style: The scope of the variable 'username' can be reduced. [variableScope]
+    char* username;
+          ^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:367:11: style: The scope of the variable 'password' can be reduced. [variableScope]
+    char* password;
+          ^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:403:11: style: The scope of the variable 'publicKey64' can be reduced. [variableScope]
+    byte* publicKey64;
+          ^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:405:11: style: The scope of the variable 'username' can be reduced. [variableScope]
+    byte* username;
+          ^
+src/agent.c:1195:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS)
+            ^
+src/agent.c:1191:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/agent.c:1195:13: note: Second condition
+    if (ret == WS_SUCCESS)
+            ^
+src/agent.c:1497:18: warning: Either the condition 'agent!=NULL' is redundant or there is possible null pointer dereference: agent. [nullPointerRedundantCheck]
+    void* heap = agent->heap;
+                 ^
+src/agent.c:1501:15: note: Assuming that condition 'agent!=NULL' is not redundant
+    if (agent != NULL) {
+              ^
+src/agent.c:1497:18: note: Null pointer dereference
+    void* heap = agent->heap;
+                 ^
+src/agent.c:744:13: style: The scope of the variable 'idx' can be reduced. [variableScope]
+        int idx;
+            ^
+src/agent.c:1208:11: style: The scope of the variable 'passphrase' can be reduced. [variableScope]
+    byte* passphrase;
+          ^
+src/agent.c:1254:11: style: The scope of the variable 'passphrase' can be reduced. [variableScope]
+    byte* passphrase;
+          ^
+src/agent.c:1765:9: style: The scope of the variable 'rxSz' can be reduced. [variableScope]
+    int rxSz;
+        ^
+src/certman.c:213:17: style: Variable 'certIdx' is assigned a value that is never used. [unreadVariable]
+    int certIdx = 0;
+                ^
+src/certman.c:473:23: style: Variable 'uuidSz' is assigned a value that is never used. [unreadVariable]
+        word32 uuidSz = DEFAULT_UUID_SZ;
+                      ^
+src/internal.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 63 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/internal.c:3438:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:3426:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:3438:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5433:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5420:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5433:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5760:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5755:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5760:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5772:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5760:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5772:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8894:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8889:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8894:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8941:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8894:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8941:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:8968:17: style: The if condition is the same as the previous if condition [duplicateCondition]
+        if (ret == 0) {
+                ^
+src/internal.c:8963:17: note: First condition
+        if (ret == 0)
+                ^
+src/internal.c:8968:17: note: Second condition
+        if (ret == 0) {
+                ^
+src/internal.c:9566:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:9482:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:9566:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:9694:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:9690:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:9694:13: note: Second condition
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:12136:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:12129:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:12136:13: note: Second condition
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:12470:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:12461:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:12470:13: note: Second condition
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:12583:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:12560:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:12583:13: note: Second condition
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:9133:25: style: Condition 'ret==0' is always true [knownConditionTrueFalse]
+                if (ret == 0) {
+                        ^
+src/internal.c:9118:23: note: Assignment 'ret=0', assigned value is 0
+                ret = 0;
+                      ^
+src/internal.c:9133:25: note: Condition 'ret==0' is always true
+                if (ret == 0) {
+                        ^
+src/internal.c:9767:27: style: Condition 'primeGroup[0]&0x80' is always true [knownConditionTrueFalse]
+        if (primeGroup[0] & 0x80)
+                          ^
+src/internal.c:9770:26: style: Condition 'generator[0]&0x80' is always false [knownConditionTrueFalse]
+        if (generator[0] & 0x80)
+                         ^
+src/internal.c:8178:9: warning: Either the condition 'ssh==NULL' is redundant or there is possible null pointer dereference: ssh. [nullPointerRedundantCheck]
+    if (ssh->ctx->side == WOLFSSH_ENDPOINT_SERVER &&
+        ^
+src/internal.c:8175:13: note: Assuming that condition 'ssh==NULL' is not redundant
+    if (ssh == NULL)
+            ^
+src/internal.c:8178:9: note: Null pointer dereference
+    if (ssh->ctx->side == WOLFSSH_ENDPOINT_SERVER &&
+        ^
+src/internal.c:9150:53: warning: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                    (ssh->handshake->eSz <= (word32)kem->length_public_key)) {
+                                                    ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9150:53: note: Null pointer dereference
+                    (ssh->handshake->eSz <= (word32)kem->length_public_key)) {
+                                                    ^
+src/internal.c:9162:28: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                    fSz -= kem->length_ciphertext;
+                           ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9162:28: note: Null pointer dereference
+                    fSz -= kem->length_ciphertext;
+                           ^
+src/internal.c:9163:33: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                    ssh->kSz -= kem->length_shared_secret;
+                                ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9163:33: note: Null pointer dereference
+                    ssh->kSz -= kem->length_shared_secret;
+                                ^
+src/internal.c:9186:45: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                        ssh->handshake->e + kem->length_public_key,
+                                            ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9186:45: note: Null pointer dereference
+                        ssh->handshake->e + kem->length_public_key,
+                                            ^
+src/internal.c:9187:55: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                        ssh->handshake->eSz - (word32)kem->length_public_key,
+                                                      ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9187:55: note: Null pointer dereference
+                        ssh->handshake->eSz - (word32)kem->length_public_key,
+                                                      ^
+src/internal.c:9198:39: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                              f_ptr + kem->length_ciphertext, &fSz);
+                                      ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9198:39: note: Null pointer dereference
+                              f_ptr + kem->length_ciphertext, &fSz);
+                                      ^
+src/internal.c:9199:28: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                    fSz += kem->length_ciphertext;
+                           ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9199:28: note: Null pointer dereference
+                    fSz += kem->length_ciphertext;
+                           ^
+src/internal.c:9206:40: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                              ssh->k + kem->length_shared_secret, &tmp_kSz);
+                                       ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9206:40: note: Null pointer dereference
+                              ssh->k + kem->length_shared_secret, &tmp_kSz);
+                                       ^
+src/internal.c:9208:32: warning:inconclusive: Either the condition 'kem==NULL' is redundant or there is possible null pointer dereference: kem. [nullPointerRedundantCheck]
+                    ssh->kSz = kem->length_shared_secret + tmp_kSz;
+                               ^
+src/internal.c:9144:29: note: Assuming that condition 'kem==NULL' is not redundant
+                    if (kem == NULL) {
+                            ^
+src/internal.c:9208:32: note: Null pointer dereference
+                    ssh->kSz = kem->length_shared_secret + tmp_kSz;
+                               ^
+src/internal.c:2151:9: style: The scope of the variable 'in' can be reduced. [variableScope]
+    int in;
+        ^
+src/internal.c:2258:9: style: The scope of the variable 'in' can be reduced. [variableScope]
+    int in;
+        ^
+src/internal.c:3417:11: style: The scope of the variable 'e' can be reduced. [variableScope]
+    byte* e;
+          ^
+src/internal.c:3495:11: style: The scope of the variable 'n' can be reduced. [variableScope]
+    byte* n;
+          ^
+src/internal.c:6886:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+src/internal.c:7970:17: style: The scope of the variable 'name' can be reduced. [variableScope]
+    const char* name;
+                ^
+src/internal.c:7971:9: style: The scope of the variable 'nameSz' can be reduced. [variableScope]
+    int nameSz, idx;
+        ^
+src/internal.c:9705:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:9751:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10033:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10073:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10109:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10144:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10194:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10242:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10285:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:10326:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:11753:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:11801:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:11833:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:11876:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:11927:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte *output;
+          ^
+src/internal.c:11962:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte *output;
+          ^
+src/internal.c:12005:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12120:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12168:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12221:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12278:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12332:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12381:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12487:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:12940:11: style: The scope of the variable 'output' can be reduced. [variableScope]
+    byte* output;
+          ^
+src/internal.c:1935:16: error: Uninitialized variable: list [uninitvar]
+        while (list && listSz) {
+               ^
+src/internal.c:8352:29: style: struct member 'Anonymous5::keyBlobName' is never used. [unusedStructMember]
+                const char *keyBlobName;
+                            ^
+src/internal.c:10394:25: style: struct member 'Anonymous8::keyBlobName' is never used. [unusedStructMember]
+            const char *keyBlobName;
+                        ^
+src/internal.c:1245:16: style: Variable 'keyId' is assigned a value that is never used. [unreadVariable]
+    byte keyId = ID_NONE;
+               ^
+src/internal.c:9706:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:9752:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:10034:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:10074:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:10110:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:10145:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:10195:16: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    word32 idx = 0;
+               ^
+src/internal.c:5262:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5248:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5262:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5326:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:5320:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5326:13: note: Second condition
+    if (ret == WS_SUCCESS)
+            ^
+src/internal.c:5596:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5582:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5596:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5651:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5645:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:5651:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:10748:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:10738:13: note: First condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:10748:13: note: Second condition
+    if (ret == WS_SUCCESS) {
+            ^
+src/internal.c:947:13: style: The comparison 'ret == 0' is always true. [knownConditionTrueFalse]
+    if (ret == 0) {
+            ^
+src/internal.c:935:15: note: 'ret' is assigned value '0' here.
+    int ret = 0;
+              ^
+src/internal.c:947:13: note: The comparison 'ret == 0' is always true.
+    if (ret == 0) {
+            ^
+src/internal.c:3774:9: style: The scope of the variable 'error' can be reduced. [variableScope]
+    int error;
+        ^
+src/internal.c:9915:14: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+        else if (ssh->handshake->useEcc
+             ^
+src/internal.c:9947:9: note: Found duplicate branches for 'if' and 'else'.
+        else {
+        ^
+src/internal.c:9915:14: note: Found duplicate branches for 'if' and 'else'.
+        else if (ssh->handshake->useEcc
+             ^
+src/io.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/port.c:417:11: style: Variable 'error' is reassigned a value before the old one has been used. [redundantAssignment]
+    error = mbstowcs_s(&unicodeNewNameSz, NULL, 0, newName, 0);
+          ^
+src/port.c:411:11: note: error is assigned
+    error = mbstowcs_s(&returnSz, unicodeOldName, unicodeOldNameSz,
+          ^
+src/port.c:417:11: note: error is overwritten
+    error = mbstowcs_s(&unicodeNewNameSz, NULL, 0, newName, 0);
+          ^
+src/port.c:183:13: warning: In expression like '*A++' the result of '*' is unused. Did you intend to write '(*A)++;'? [clarifyStatement]
+        *fSz--;
+            ^
+src/port.c:280:31: error: Uninitialized variable: error [uninitvar]
+    return (success != 0) && (error == 0);
+                              ^
+src/port.c:254:11: style: Variable 'error' is assigned a value that is never used. [unreadVariable]
+    error = wcstombs_s(NULL, realFileName, realFileNameSz,
+          ^
+src/ssh.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/ssh.c:2132:13: warning: Either the condition 'channel==NULL' is redundant or there is possible null pointer dereference: channel. [nullPointerRedundantCheck]
+            channel->channel, channel->peerChannel);
+            ^
+src/ssh.c:2137:17: note: Assuming that condition 'channel==NULL' is not redundant
+    if (channel == NULL || buf == NULL)
+                ^
+src/ssh.c:2132:13: note: Null pointer dereference
+            channel->channel, channel->peerChannel);
+            ^
+src/ssh.c:1121:22: style: The scope of the variable 'channel' can be reduced. [variableScope]
+    WOLFSSH_CHANNEL* channel;
+                     ^
+src/ssh.c:1550:9: style: The scope of the variable 'format' can be reduced. [variableScope]
+    int format;
+        ^
+src/wolfscp.c:321:0: information: Skipping configuration 'WOLFSSH_SCP;WSCPFILEHDR' since the value of 'WSCPFILEHDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    filehdr = WSCPFILEHDR(ssh);
+^
+src/wolfsftp.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/wolfsftp.c:591:30: style: Redundant condition: buffer->data!=NULL. 'buffer->data==NULL || (buffer->data!=NULL && buffer->sz!=sz)' is equivalent to 'buffer->data==NULL || buffer->sz!=sz' [redundantCondition]
+    if (buffer->data == NULL ||
+                             ^
+src/wolfsftp.c:7440:29: style: Redundant condition: ret==NULL. 'ret!=NULL || (ret==NULL && ssh->error!=WS_WANT_READ)' is equivalent to 'ret!=NULL || ssh->error!=WS_WANT_READ' [redundantCondition]
+            if (ret != NULL || (ret == NULL && ssh->error != WS_WANT_READ)) {
+                            ^
+src/wolfsftp.c:3171:13: style: Condition 'cur!=NULL' is always true [knownConditionTrueFalse]
+    if (cur != NULL) {
+            ^
+src/wolfsftp.c:3159:13: note: Assuming that condition 'cur==NULL' is not redundant
+    if (cur == NULL) {
+            ^
+src/wolfsftp.c:3171:13: note: Condition 'cur!=NULL' is always true
+    if (cur != NULL) {
+            ^
+src/wolfsftp.c:534:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+src/wolfsftp.c:2452:19: style: Variable 'linkCount' is assigned a value that is never used. [unreadVariable]
+    int linkCount = 1; /* @TODO set to correct value */
+                  ^
+src/wolfsftp.c:2451:10: style: Unused variable: perm [unusedVariable]
+    char perm[11];
+         ^
+src/wolfsftp.c:2457:23: style: Unused variable: atr [unusedVariable]
+    WS_SFTP_FILEATRB* atr;
+                      ^
+src/wolfsftp.c:2458:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+src/wolfsftp.c:2275:10: style: The scope of the variable 'realName' can be reduced. [variableScope]
+    char realName[MAX_PATH];
+         ^
+src/wolfsftp.c:2283:10: style: The scope of the variable 'name' can be reduced. [variableScope]
+    char name[MAX_PATH];
+         ^
+src/wolfsftp.c:4241:59: style: Clarify calculation precedence for '|' and '?'. [clarifyCalculation]
+        (stats.dwFileAttributes | FILE_ATTRIBUTE_READONLY ? 0 : 0200);
+                                                          ^
+src/wolfsftp.c:1741:14: style: Variable 'mode' is assigned a value that is never used. [unreadVariable]
+        mode = 0x41ED;
+             ^
+src/wolfsftp.c:2024:25: style: Variable 'flagsAndAttrs' is assigned a value that is never used. [unreadVariable]
+    DWORD flagsAndAttrs = 0;
+                        ^
+src/wolfsftp.c:2057:37: style: Variable 'idx' is assigned a value that is never used. [unreadVariable]
+    ato32(data + idx, &reason); idx += UINT32_SZ;
+                                    ^
+src/wolfterm.c:323:19: style: Variable 'maxIdx' is assigned a value that is never used. [unreadVariable]
+    word32 maxIdx = WOLFSSH_MAX_CONSOLE_ARGS * 4;
+                  ^
+tests/api.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+tests/api.c:777:13: style: The scope of the variable 'outSz' can be reduced. [variableScope]
+        int outSz = 18;
+            ^
+tests/api.c:778:13: style: The scope of the variable 'rxSz' can be reduced. [variableScope]
+        int rxSz;
+            ^
+tests/api.c:777:19: style: Variable 'outSz' is assigned a value that is never used. [unreadVariable]
+        int outSz = 18;
+                  ^
+tests/api.c:894:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 3, j = 4; /* arbitrary value */
+          ^
+tests/api.c:894:18: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    int i = 3, j = 4; /* arbitrary value */
+                 ^
+tests/api.c:895:22: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    const char err[] = "test setting error msg";
+                     ^
+tests/api.c:563:0: information: Skipping configuration 'WOLFSSH_CERTMAN' since the value of 'WOLFSSH_CERTMAN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        WOLFSSH_CERTMAN* cm = NULL;
+^
+tests/api.c:572:0: information: Skipping configuration 'WOLFSSH_CERTMAN' since the value of 'WOLFSSH_CERTMAN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        WOLFSSH_CERTMAN cm;
+^
+tests/api.c:573:0: information: Skipping configuration 'WOLFSSH_CERTMAN' since the value of 'WOLFSSH_CERTMAN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        WOLFSSH_CERTMAN* cmRef;
+^
+tests/api.c:491:13: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (ret == 0) {
+            ^
+tests/api.c:485:13: note: First condition
+    if (ret == 0) {
+            ^
+tests/api.c:491:13: note: Second condition
+    if (ret == 0) {
+            ^
+tests/api.c:486:15: warning: Either the condition 'f==NULL' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+        fseek(f, 0, XSEEK_END);
+              ^
+tests/api.c:481:15: note: Assuming that condition 'f==NULL' is not redundant
+        if (f == NULL)
+              ^
+tests/api.c:486:15: note: Null pointer dereference
+        fseek(f, 0, XSEEK_END);
+              ^
+tests/api.c:487:32: warning: Either the condition 'f==NULL' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+        *bufSz = (word32)ftell(f);
+                               ^
+tests/api.c:481:15: note: Assuming that condition 'f==NULL' is not redundant
+        if (f == NULL)
+              ^
+tests/api.c:487:32: note: Null pointer dereference
+        *bufSz = (word32)ftell(f);
+                               ^
+tests/api.c:488:16: warning: Either the condition 'f==NULL' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+        rewind(f);
+               ^
+tests/api.c:481:15: note: Assuming that condition 'f==NULL' is not redundant
+        if (f == NULL)
+              ^
+tests/api.c:488:16: note: Null pointer dereference
+        rewind(f);
+               ^
+tests/api.c:499:46: warning: Either the condition 'f==NULL' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+        readSz = (int)fread(*buf, 1, *bufSz, f);
+                                             ^
+tests/api.c:481:15: note: Assuming that condition 'f==NULL' is not redundant
+        if (f == NULL)
+              ^
+tests/api.c:499:46: note: Null pointer dereference
+        readSz = (int)fread(*buf, 1, *bufSz, f);
+                                             ^
+tests/testsuite.c:73:17: style: The scope of the variable 'password' can be reduced. [variableScope]
+    static char password[] = "upthehill";
+                ^
+examples/echoserver/echoserver.c:2707:0: style: The function 'Application_Initialize' is never used. [unusedFunction]
+
+^
+src/wolfscp.c:788:0: style: The function 'ChannelCommandIsScp' is never used. [unusedFunction]
+
+^
+src/wolfscp.c:667:0: style: The function 'DoScpRequest' is never used. [unusedFunction]
+
+^
+src/internal.c:10191:0: style: The function 'SendDebug' is never used. [unusedFunction]
+
+^
+src/internal.c:11960:0: style: The function 'SendGlobalRequestFwdSuccess' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:1847:0: style: The function 'ff_close' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:1797:0: style: The function 'ff_open' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:1867:0: style: The function 'ff_pread' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:1855:0: style: The function 'ff_pwrite' is never used. [unusedFunction]
+
+^
+examples/client/client.c:184:0: style: The function 'readInput' is never used. [unusedFunction]
+
+^
+examples/client/client.c:234:0: style: The function 'readPeer' is never used. [unusedFunction]
+
+^
+ide/Renesas/cs+/demo_server/wolfssh_dummy.c:44:0: style: The function 'strncasecmp' is never used. [unusedFunction]
+
+^
+ide/Renesas/cs+/demo_server/wolfssh_dummy.c:38:0: style: The function 'time' is never used. [unusedFunction]
+
+^
+src/port.c:49:0: style: The function 'wfopen' is never used. [unusedFunction]
+
+^
+apps/wolfsshd/configuration.c:1189:0: style: The function 'wolfSSHD_ConfigGetAuthKeysFile' is never used. [unusedFunction]
+
+^
+ide/STM32CUBE/wolfssh_test.c:39:0: style: The function 'wolfSSHTest' is never used. [unusedFunction]
+
+^
+src/agent.c:1667:0: style: The function 'wolfSSH_AGENT_Relay' is never used. [unusedFunction]
+
+^
+src/agent.c:1757:0: style: The function 'wolfSSH_AGENT_SignRequest' is never used. [unusedFunction]
+
+^
+src/agent.c:1626:0: style: The function 'wolfSSH_AGENT_enable' is never used. [unusedFunction]
+
+^
+src/agent.c:1643:0: style: The function 'wolfSSH_AGENT_worker' is never used. [unusedFunction]
+
+^
+src/agent.c:1609:0: style: The function 'wolfSSH_CTX_AGENT_enable' is never used. [unusedFunction]
+
+^
+src/ssh.c:1686:0: style: The function 'wolfSSH_CTX_SetWindowPacketSize' is never used. [unusedFunction]
+
+^
+src/agent.c:1577:0: style: The function 'wolfSSH_CTX_set_agent_cb' is never used. [unusedFunction]
+
+^
+src/ssh.c:2155:0: style: The function 'wolfSSH_ChannelExit' is never used. [unusedFunction]
+
+^
+src/ssh.c:1951:0: style: The function 'wolfSSH_ChannelFree' is never used. [unusedFunction]
+
+^
+src/ssh.c:1969:0: style: The function 'wolfSSH_ChannelGetId' is never used. [unusedFunction]
+
+^
+src/ssh.c:2179:0: style: The function 'wolfSSH_ChannelNext' is never used. [unusedFunction]
+
+^
+src/log.c:76:0: style: The function 'wolfSSH_Debugging_OFF' is never used. [unusedFunction]
+
+^
+src/ssh.c:220:0: style: The function 'wolfSSH_GetFilesystemHandle' is never used. [unusedFunction]
+
+^
+src/ssh.c:313:0: style: The function 'wolfSSH_GetGlobalReqCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:277:0: style: The function 'wolfSSH_GetHighwaterCtx' is never used. [unusedFunction]
+
+^
+src/io.c:87:0: style: The function 'wolfSSH_GetIOReadCtx' is never used. [unusedFunction]
+
+^
+src/io.c:97:0: style: The function 'wolfSSH_GetIOWriteCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:1809:0: style: The function 'wolfSSH_GetLastRxId' is never used. [unusedFunction]
+
+^
+src/ssh.c:1310:0: style: The function 'wolfSSH_GetPublicKeyCheckCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:349:0: style: The function 'wolfSSH_GetReqFailureCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:331:0: style: The function 'wolfSSH_GetReqSuccessCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:1258:0: style: The function 'wolfSSH_GetUserAuthCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:1284:0: style: The function 'wolfSSH_GetUserAuthResultCtx' is never used. [unusedFunction]
+
+^
+src/log.c:92:0: style: The function 'wolfSSH_LogEnabled' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:6093:0: style: The function 'wolfSSH_SFTP_CHMOD' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:7979:0: style: The function 'wolfSSH_SFTP_ClearOfst' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:8018:0: style: The function 'wolfSSH_SFTP_Get' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:7999:0: style: The function 'wolfSSH_SFTP_Interrupt' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:7103:0: style: The function 'wolfSSH_SFTP_MKDIR' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:770:0: style: The function 'wolfSSH_SFTP_PendingSend' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:8246:0: style: The function 'wolfSSH_SFTP_Put' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:7795:0: style: The function 'wolfSSH_SFTP_RMDIR' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:7689:0: style: The function 'wolfSSH_SFTP_Remove' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:7477:0: style: The function 'wolfSSH_SFTP_Rename' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:8493:0: style: The function 'wolfSSH_SFTP_ShowSizes' is never used. [unusedFunction]
+
+^
+src/wolfsftp.c:1286:0: style: The function 'wolfSSH_SFTP_read' is never used. [unusedFunction]
+
+^
+src/ssh.c:206:0: style: The function 'wolfSSH_SetFilesystemHandle' is never used. [unusedFunction]
+
+^
+src/ssh.c:287:0: style: The function 'wolfSSH_SetGlobalReq' is never used. [unusedFunction]
+
+^
+src/ssh.c:305:0: style: The function 'wolfSSH_SetGlobalReqCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:256:0: style: The function 'wolfSSH_SetHighwaterCb' is never used. [unusedFunction]
+
+^
+src/ssh.c:299:0: style: The function 'wolfSSH_SetReqFailure' is never used. [unusedFunction]
+
+^
+src/ssh.c:341:0: style: The function 'wolfSSH_SetReqFailureCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:293:0: style: The function 'wolfSSH_SetReqSuccess' is never used. [unusedFunction]
+
+^
+src/ssh.c:323:0: style: The function 'wolfSSH_SetReqSuccessCtx' is never used. [unusedFunction]
+
+^
+src/wolfscp.c:1603:0: style: The function 'wolfSSH_SetScpSend' is never used. [unusedFunction]
+
+^
+src/ssh.c:1276:0: style: The function 'wolfSSH_SetUserAuthResultCtx' is never used. [unusedFunction]
+
+^
+src/ssh.c:370:0: style: The function 'wolfSSH_get_error_name' is never used. [unusedFunction]
+
+^
+src/ssh.c:1179:0: style: The function 'wolfSSH_global_request' is never used. [unusedFunction]
+
+^
+ide/Renesas/cs+/demo_server/wolfssh_demo.c:634:0: style: The function 'wolfSSH_init' is never used. [unusedFunction]
+
+^
+src/agent.c:1594:0: style: The function 'wolfSSH_set_agent_cb_ctx' is never used. [unusedFunction]
+
+^
+ide/Renesas/cs+/demo_server/wolfssh_dummy.c:28:0: style: The function 'ws_Ioctl' is never used. [unusedFunction]
+
+^
+src/port.c:481:0: style: The function 'wstrdup' is never used. [unusedFunction]
+
+^
+src/port.c:496:0: style: The function 'wstrnstr' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
